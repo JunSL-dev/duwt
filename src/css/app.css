@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-family: 'Nanum Gothic', sans-serif;
+
+    box-sizing:border-box;
+
+    user-select: none;
+
+    color:#FEF8F2;
+    font-weight:lighter;
+}
+
+#filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+
+    background:url('../image/bg.jpeg');
+    background-size:cover;
+}
+
+::-webkit-scrollbar{
+    width:0;
+}
+
+#root{
+    width:100%;
+    height:100%;
+}
+
+.nav{
+    width:100%;
+    height:55px;
+    
+    font-weight:bold;
+
+    border-bottom:1px solid rgba(254,248,242,0.2);
+}
+
+.container{
+    width:94%;
+    margin:0 auto;
+
+}
+
+.nav-item{
+    display:inline-block;
+    margin-right:30px;
+
+    height:100%;
+    line-height:55px;
+
+    width:20px;
+
+    cursor:pointer;
+}
+
+.nav-item span{
+    transition:.3s;
+}
+
+.nav-item:hover span{
+    color:#ccc;
+    font-size:1.1rem;
+}
+
+.work{
+    width:100%;
+    height:calc(100% - 55px);
+}
+
+#side-nav{
+    overflow:scroll;
+
+    width:20%;
+    height:100%;
+
+    float:left;
+
+    text-align:center;
+
+    border-right:1px solid rgba(258,248,242,0.2);
+}
+
+#work-area{
+    width:80%;
+    height:100%;
+    
+    float:right;
+    
+    padding:5px 0 5px 0;
+}
+
+.side-nav-item{
+    transition: .5s;
+
+    padding:10px 15px;
+    
+    width:calc(100% + 1px);
+    height:130px;
+
+    cursor:pointer;
+
+    border:1px solid rgba(254,248,242,0.2);
+
+    position: relative;
+}
+
+.side-nav-item:hover{
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow:0px 0px 2px #fff inset;
+}
+
+.side-nav-item[title='add']{
+    font-size:25px;
+    font-weight:300;
+}
+
+#card-from{
+    width:100%;
+    height:100%;
+}
+
+#card-info{
+    position: relative;
+
+    width:945px;
+    height:480px;
+    margin:15px auto 0 auto;
+
+    background:rgba(63,59,56,0.4);
+
+    border:1px solid rgba(254,248,242,0.4);
+    border-radius: 10px;
+}
+
+#choose-bank{
+    position:absolute;
+    top:25px;
+
+    appearance: none;
+    background:transparent;
+
+    outline:none;
+    border:none;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+#icChip{
+    position:absolute;
+    top:140px;
+    left:8px;
+
+    width:100%;
+
+    display:flex;
+    align-items: center;
+}
+
+#icChip img{
+    width:140px;
+}
+
+#card-arrow{
+    width:50px !important;
+    margin-right:10px;
+}

@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import Navigation from './components/navigation/navigation'
+import WorkStation from './components/workStation/workStation'
+
+import './css/app.css'
 
 class App extends Component {
+
+  state = {
+    workStation : "Cards"
+  }
+
+  onNaviChange = (e) => {
+      this.setState({
+        workStation : e.target.title
+      })
+  }
+
   render() {
+    const {workStation} = this.state
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Fragment>
+        <div id='filter'></div>
+        <Navigation 
+          onChange={this.onNaviChange}
+        />
+        <WorkStation
+          workStation={workStation}
+        />
+      </Fragment>
     );
   }
 }
